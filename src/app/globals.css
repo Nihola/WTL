@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer utilities {
+
+    .clip-style{
+ 
+        clip-path: polygon(0 0, 100% 0, 100% 10 0, 0 calc(100% - 80px));
+ 
+    }
+ 
+ }
