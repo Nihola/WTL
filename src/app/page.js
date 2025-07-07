@@ -1,11 +1,12 @@
 import React from 'react'
 import Header from './components/header'
 import Services from './services/page'
-import CarDimensions from './cardimensions/page'
+ 
 import Advantages from './advantages/page'
 import Contact from './contact/page'
 import Footer from './components/footer'
 import About from './about'
+import CardDimensions from './cardimensions/page'
 
 export default function Home() {
   return (
@@ -43,7 +44,7 @@ export default function Home() {
             <About />
           </div>          
           <div id='cardimensions'>
-            <CarDimensions />
+            <CardDimensions />
           </div>
           <div id='advantages'>
             <Advantages />
@@ -54,8 +55,7 @@ export default function Home() {
         </div>
 
       </div>
-
-      <Footer />
+ 
     </div>
   )
 }

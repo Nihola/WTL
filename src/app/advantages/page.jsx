@@ -1,9 +1,44 @@
 import Image from 'next/image'
 import React from 'react'
-
+// FeatureCards.jsx
+import { FaUsers, FaHeadset, FaGlobe, FaTruck } from "react-icons/fa";
+import DeliverySlider from '../components/DeliverySlider';
+ 
+const features = [
+  {
+    title: "Tajribali jamoa",
+    description: "Bizning jamoamiz yuqori darajadagi xizmat va qo‘llab-quvvatlashni taqdim etishga tayyor tajribali mutaxassislardan iborat.",
+    icon: <FaUsers />,
+    bg: "from-[#dbeafe] to-[#93c5fd]", // light blue
+    hoverBg: "from-blue-600 to-blue-900",
+  },
+  {
+    title: "Mijozlarni qo‘llab-quvvatlash",
+    description: "Biz har doim sizning savollaringiz yoki takliflaringizga yordam berishga tayyormiz, 24/7 sifatli yordam taqdim etamiz.",
+    icon: <FaHeadset />,
+    bg: "from-[#dbeafe] to-[#93c5fd]",
+    hoverBg: "from-blue-600 to-blue-900",
+  },
+  {
+    title: "Global tarmoq",
+    description: "Bizning tarmog‘imiz ko‘plab mamlakatlarni qamrab oladi, bu bizga moslashuvchan va samarali yetkazib berish yechimlarini taqdim etish imkonini beradi.",
+    icon: <FaGlobe />,
+    bg: "from-[#dbeafe] to-[#93c5fd]",
+    hoverBg: "from-blue-600 to-blue-900",
+  },
+  {
+    title: "Tez yetkazib berish",
+    description: "Tez va ishonchli yetkazib berish, tajribali jamoa va 24/7 qo‘llab-quvvatlash.",
+    icon: <FaTruck />,
+    bg: "from-[#dbeafe] to-[#93c5fd]",
+    hoverBg: "from-blue-600 to-blue-900",
+  },
+];
+ 
 export default function Advantages() {
+ 
   return (
-    <div id='advantages' className="py-24">
+    <div  className="py-24">
       <div className='container mx-auto px-4'>
         <div className='text-center mb-20'>
           <h2 className='text-4xl md:text-5xl font-bold mb-8 flex flex-col md:flex-row items-center justify-center gap-2'>
@@ -68,6 +103,36 @@ export default function Advantages() {
           </div>
         </div>
       </div>
+      
+
+      <div className="container mx-auto px-4 py-12">
+          <h2 className="text-4xl font-bold text-center mb-4">Ishonchlilik va xavfsizlik</h2>
+          <p className="text-center text-gray-600 mb-10 max-w-3xl mx-auto">
+            Biz zamonaviy texnologiyalar va sinovdan o‘tgan usullar yordamida sizning yuklaringizni
+            ishonchli va xavfsiz yetkazib berishni kafolatlaymiz.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((item, index) => (
+              <div
+                key={index}
+                className={`rounded-2xl p-6 text-center shadow-md transition-all duration-300 bg-gradient-to-br ${item.bg} hover:${item.hoverBg} hover:text-white group`}
+              >
+                <div className="w-16 h-16 mx-auto flex items-center justify-center text-3xl bg-transparent border-[2px] border-white px-4 group-hover:bg-white text-blue-700 rounded-full shadow-md mb-4 transition-transform duration-300 group-hover:rotate-[90deg]">
+
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-700 group-hover:text-white">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      
+      <div className="container mx-auto px-4 py-8">
+      <DeliverySlider/>
+      </div>
+ 
+     
     </div>
   )
 }

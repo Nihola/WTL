@@ -13,12 +13,12 @@ export default function Header() {
   }, [menuOpen])
 
   const navLinks = [
-    { label: 'Asosiy', href: '/' },
-    { label: 'Biz haqimizda', href: '/about' },
-    { label: 'Xizmatlar', href: '/services' },
-    { label: 'Tashishlar', href: '/cardimensions' },
-    { label: 'Afzalliklar', href: '/advantages' },
-    { label: 'Aloqa', href: '/contact' },
+    { label: 'Asosiy', href: '#main' },
+    { label: 'Biz haqimizda', href: '#about' },
+    { label: 'Xizmatlar', href: '#services' },
+    { label: 'Tashishlar', href: '#cardimensions' },
+    { label: 'Afzalliklar', href: '#advantages' },
+    { label: 'Aloqa', href: '#contact' },
   ]
 
   return (

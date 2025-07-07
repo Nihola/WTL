@@ -3,7 +3,7 @@ import { FaCheck } from 'react-icons/fa';
 
 export default function About() {
   return (
-    <div className="bg-[#f9fafb] min-h-screen py-10 px-4">
+    <div className="bg-[#f9fafb] min-h-screen py-10 px-4 mt-5">
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-md p-6 md:p-10 space-y-8">
 
         

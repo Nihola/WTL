@@ -31,7 +31,7 @@ export const services = [
 
 export default function Services() {
   return (
-    <div className="py-20 px-4 md:px-16 bg-gray-50">
+    <div className="container mx-auto px-1 py-1 bg-gray-50">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-blue-600">Bizning <span className="text-gray-800">Xizmatlar</span></h1>
       </div>
